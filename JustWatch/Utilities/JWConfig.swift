@@ -19,4 +19,7 @@ class JWConfig {
     static let COLOR_LAVENDER_GRAY = "#BFB8DA"
     static let COLOR_LIGHT_ORCHID = "#E8B7D4"
     static let COLOR_STRIKEMASTER = "#A5678E"
+    
+    // MARK: Image Names
+    static let IMG_PLACEHOLDER_MOVIE_POSTER = "placeholder_movie_poster"
 }
