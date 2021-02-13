@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		311662C008F7357FAB4E67C0 /* Pods_JustWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526516E9BA03FBD57C90B088 /* Pods_JustWatch.framework */; };
+		EC80995025D75F6100B7E7F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80994F25D75F6100B7E7F5 /* AppDelegate.swift */; };
+		EC80995225D75F6100B7E7F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80995125D75F6100B7E7F5 /* SceneDelegate.swift */; };
+		EC80995425D75F6100B7E7F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80995325D75F6100B7E7F5 /* ContentView.swift */; };
+		EC80995725D75F6100B7E7F5 /* JustWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC80995525D75F6100B7E7F5 /* JustWatch.xcdatamodeld */; };
+		EC80995925D75F6200B7E7F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC80995825D75F6200B7E7F5 /* Assets.xcassets */; };
+		EC80995C25D75F6200B7E7F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC80995B25D75F6200B7E7F5 /* Preview Assets.xcassets */; };
+		EC80995F25D75F6200B7E7F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC80995D25D75F6200B7E7F5 /* LaunchScreen.storyboard */; };
+		EC80997325D760C800B7E7F5 /* JWConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80997225D760C800B7E7F5 /* JWConfig.swift */; };
+		EC80997725D760FE00B7E7F5 /* JWExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80997625D760FE00B7E7F5 /* JWExtensions.swift */; };
+		EC80997A25D7628E00B7E7F5 /* JWServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80997925D7628E00B7E7F5 /* JWServices.swift */; };
+		EC80998225D77D1000B7E7F5 /* TMDBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80998125D77D1000B7E7F5 /* TMDBError.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4BCA2ED00C75FCEA511D88FE /* Pods-JustWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustWatch.release.xcconfig"; path = "Target Support Files/Pods-JustWatch/Pods-JustWatch.release.xcconfig"; sourceTree = "<group>"; };
+		526516E9BA03FBD57C90B088 /* Pods_JustWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD3E366AD8959251272AE5BD /* Pods-JustWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustWatch.debug.xcconfig"; path = "Target Support Files/Pods-JustWatch/Pods-JustWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		EC80994C25D75F6100B7E7F5 /* JustWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC80994F25D75F6100B7E7F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC80995125D75F6100B7E7F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC80995325D75F6100B7E7F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC80995625D75F6100B7E7F5 /* JustWatch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JustWatch.xcdatamodel; sourceTree = "<group>"; };
+		EC80995825D75F6200B7E7F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC80995B25D75F6200B7E7F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC80995E25D75F6200B7E7F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC80996025D75F6200B7E7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC80997225D760C800B7E7F5 /* JWConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWConfig.swift; sourceTree = "<group>"; };
+		EC80997625D760FE00B7E7F5 /* JWExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWExtensions.swift; sourceTree = "<group>"; };
+		EC80997925D7628E00B7E7F5 /* JWServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWServices.swift; sourceTree = "<group>"; };
+		EC80998125D77D1000B7E7F5 /* TMDBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBError.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC80994925D75F6100B7E7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				311662C008F7357FAB4E67C0 /* Pods_JustWatch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		901A9D59BA61512CA8DB25A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD3E366AD8959251272AE5BD /* Pods-JustWatch.debug.xcconfig */,
+				4BCA2ED00C75FCEA511D88FE /* Pods-JustWatch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE06C5F18817D3945E178E64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				526516E9BA03FBD57C90B088 /* Pods_JustWatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC80994325D75F6100B7E7F5 = {
+			isa = PBXGroup;
+			children = (
+				EC80994E25D75F6100B7E7F5 /* JustWatch */,
+				EC80994D25D75F6100B7E7F5 /* Products */,
+				901A9D59BA61512CA8DB25A4 /* Pods */,
+				BE06C5F18817D3945E178E64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC80994D25D75F6100B7E7F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC80994C25D75F6100B7E7F5 /* JustWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC80994E25D75F6100B7E7F5 /* JustWatch */ = {
+			isa = PBXGroup;
+			children = (
+				EC80997025D7608700B7E7F5 /* Models */,
+				EC80996F25D7607E00B7E7F5 /* Utilities */,
+				EC80996E25D7607A00B7E7F5 /* Views */,
+				EC80996D25D7607200B7E7F5 /* Life Cycle */,
+				EC80995825D75F6200B7E7F5 /* Assets.xcassets */,
+				EC80996025D75F6200B7E7F5 /* Info.plist */,
+				EC80995525D75F6100B7E7F5 /* JustWatch.xcdatamodeld */,
+				EC80995A25D75F6200B7E7F5 /* Preview Content */,
+			);
+			path = JustWatch;
+			sourceTree = "<group>";
+		};
+		EC80995A25D75F6200B7E7F5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC80995B25D75F6200B7E7F5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC80996D25D7607200B7E7F5 /* Life Cycle */ = {
+			isa = PBXGroup;
+			children = (
+				EC80995125D75F6100B7E7F5 /* SceneDelegate.swift */,
+				EC80994F25D75F6100B7E7F5 /* AppDelegate.swift */,
+			);
+			path = "Life Cycle";
+			sourceTree = "<group>";
+		};
+		EC80996E25D7607A00B7E7F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC80997125D7609A00B7E7F5 /* Splash Screen */,
+				EC80995325D75F6100B7E7F5 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC80996F25D7607E00B7E7F5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EC80997225D760C800B7E7F5 /* JWConfig.swift */,
+				EC80997625D760FE00B7E7F5 /* JWExtensions.swift */,
+				EC80997925D7628E00B7E7F5 /* JWServices.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EC80997025D7608700B7E7F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC80998125D77D1000B7E7F5 /* TMDBError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC80997125D7609A00B7E7F5 /* Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EC80995D25D75F6200B7E7F5 /* LaunchScreen.storyboard */,
+			);
+			path = "Splash Screen";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC80994B25D75F6100B7E7F5 /* JustWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC80996325D75F6200B7E7F5 /* Build configuration list for PBXNativeTarget "JustWatch" */;
+			buildPhases = (
+				A290C21ED2F9F567F07DBD4B /* [CP] Check Pods Manifest.lock */,
+				EC80994825D75F6100B7E7F5 /* Sources */,
+				EC80994925D75F6100B7E7F5 /* Frameworks */,
+				EC80994A25D75F6100B7E7F5 /* Resources */,
+				56D010B282B1296B05CED1A5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JustWatch;
+			productName = JustWatch;
+			productReference = EC80994C25D75F6100B7E7F5 /* JustWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC80994425D75F6100B7E7F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					EC80994B25D75F6100B7E7F5 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = EC80994725D75F6100B7E7F5 /* Build configuration list for PBXProject "JustWatch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC80994325D75F6100B7E7F5;
+			productRefGroup = EC80994D25D75F6100B7E7F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC80994B25D75F6100B7E7F5 /* JustWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC80994A25D75F6100B7E7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC80995F25D75F6200B7E7F5 /* LaunchScreen.storyboard in Resources */,
+				EC80995C25D75F6200B7E7F5 /* Preview Assets.xcassets in Resources */,
+				EC80995925D75F6200B7E7F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56D010B282B1296B05CED1A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JustWatch/Pods-JustWatch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JustWatch/Pods-JustWatch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JustWatch/Pods-JustWatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A290C21ED2F9F567F07DBD4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JustWatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC80994825D75F6100B7E7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC80995025D75F6100B7E7F5 /* AppDelegate.swift in Sources */,
+				EC80995225D75F6100B7E7F5 /* SceneDelegate.swift in Sources */,
+				EC80995425D75F6100B7E7F5 /* ContentView.swift in Sources */,
+				EC80998225D77D1000B7E7F5 /* TMDBError.swift in Sources */,
+				EC80995725D75F6100B7E7F5 /* JustWatch.xcdatamodeld in Sources */,
+				EC80997725D760FE00B7E7F5 /* JWExtensions.swift in Sources */,
+				EC80997325D760C800B7E7F5 /* JWConfig.swift in Sources */,
+				EC80997A25D7628E00B7E7F5 /* JWServices.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC80995D25D75F6200B7E7F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC80995E25D75F6200B7E7F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC80996125D75F6200B7E7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC80996225D75F6200B7E7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC80996425D75F6200B7E7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD3E366AD8959251272AE5BD /* Pods-JustWatch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"JustWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = 6J2XDDYT2W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = JustWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cleanrun.JustWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC80996525D75F6200B7E7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BCA2ED00C75FCEA511D88FE /* Pods-JustWatch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"JustWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = 6J2XDDYT2W;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = JustWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cleanrun.JustWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC80994725D75F6100B7E7F5 /* Build configuration list for PBXProject "JustWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC80996125D75F6200B7E7F5 /* Debug */,
+				EC80996225D75F6200B7E7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC80996325D75F6200B7E7F5 /* Build configuration list for PBXNativeTarget "JustWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC80996425D75F6200B7E7F5 /* Debug */,
+				EC80996525D75F6200B7E7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC80995525D75F6100B7E7F5 /* JustWatch.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC80995625D75F6100B7E7F5 /* JustWatch.xcdatamodel */,
+			);
+			currentVersion = EC80995625D75F6100B7E7F5 /* JustWatch.xcdatamodel */;
+			path = JustWatch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EC80994425D75F6100B7E7F5 /* Project object */;
+}

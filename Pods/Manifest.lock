@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.2.1)
+  - NavigationStack (1.0.2)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - NavigationStack
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - NavigationStack
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  NavigationStack: bb6c4f3d1b9fe92f1f6d47370f73c9233ad56272
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: c67baad20a133e2d1ea7e2d56c00ee542c8b207f
+
+COCOAPODS: 1.9.1
