@@ -113,4 +113,31 @@ class JWServices {
         }
     }
     
+    class func RequestImage(url: String, onSuccess: @escaping (Data) -> Void, onFailure: @escaping () -> Void) {
+        if manager == nil {
+            let urlConfig = URLSessionConfiguration.default
+            urlConfig.timeoutIntervalForRequest = JWConfig.RTO_INTERVAL
+            manager = Session(configuration: urlConfig)
+        }
+        print("-image url: \n\(url)")
+        let request = manager.request(url, method: HTTPMethod.get, encoding: URLEncoding.default)
+        request.response { response in
+            switch response.result {
+            case .success(let values):
+                print("-response: \n\(values!)")
+                switch response.response?.statusCode {
+                case 200:
+                    onSuccess(values!)
+                case 404:
+                    onFailure()
+                default:
+                    onFailure()
+                }
+            case .failure(let values):
+                print("-response: \n\(values)")
+                onFailure()
+            }
+        }
+    }
+    
 }

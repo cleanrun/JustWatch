@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 struct TVNavigationView: View {
     var body: some View {
-        ZStack {
-            Color.red
-        }.edgesIgnoringSafeArea(.all)
+        NavigationStackView {
+            ZStack {
+                TVHomeView()
+            }.edgesIgnoringSafeArea(.all)
+        }
     }
 }
 

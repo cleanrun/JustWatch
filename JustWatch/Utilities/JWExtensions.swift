@@ -91,6 +91,93 @@ extension Color {
     }
 }
 
+// MARK: String Extension
+extension String {
+    public func toMovieGenre() -> String {
+        switch self {
+        case JWConfig.MOVIE_GENRE_ACTION:
+            return "Action"
+        case JWConfig.MOVIE_GENRE_ADVENTURE:
+            return "Adventure"
+        case JWConfig.MOVIE_GENRE_ANIMATION:
+            return "Animation"
+        case JWConfig.MOVIE_GENRE_COMEDY:
+            return "Comedy"
+        case JWConfig.MOVIE_GENRE_CRIME:
+            return "Crime"
+        case JWConfig.MOVIE_GENRE_DOCUMENTARY:
+            return "Documentary"
+        case JWConfig.MOVIE_GENRE_DRAMA:
+            return "Drama"
+        case JWConfig.MOVIE_GENRE_FAMILY:
+            return "Family"
+        case JWConfig.MOVIE_GENRE_FANTASY:
+            return "Fantasy"
+        case JWConfig.MOVIE_GENRE_HISTORY:
+            return "History"
+        case JWConfig.MOVIE_GENRE_HORROR:
+            return "Horror"
+        case JWConfig.MOVIE_GENRE_MUSIC:
+            return "Music"
+        case JWConfig.MOVIE_GENRE_MYSTERY:
+            return "Mystery"
+        case JWConfig.MOVIE_GENRE_ROMANCE:
+            return "Romance"
+        case JWConfig.MOVIE_GENRE_SCIFI:
+            return "Science-Fiction"
+        case JWConfig.MOVIE_GENRE_TV_MOVIE:
+            return "TV Movie"
+        case JWConfig.MOVIE_GENRE_THRILLER:
+            return "Thriller"
+        case JWConfig.MOVIE_GENRE_WAR:
+            return "War"
+        case JWConfig.MOVIE_GENRE_WESTERN:
+            return "Western"
+        default:
+            return ""
+        }
+    }
+    
+    public func toTVGenre() -> String {
+        switch self {
+        case JWConfig.TV_GENRE_ACTION_ADVENTURE:
+            return "Action Adventure"
+        case JWConfig.TV_GENRE_ANIMATION:
+            return "Animation"
+        case JWConfig.TV_GENRE_COMEDY:
+            return "Comedy"
+        case JWConfig.TV_GENRE_CRIME:
+            return "Crime"
+        case JWConfig.TV_GENRE_DOCUMENTARY:
+            return "Documentary"
+        case JWConfig.TV_GENRE_DRAMA:
+            return "Drama"
+        case JWConfig.TV_GENRE_FAMILY:
+            return "Family"
+        case JWConfig.TV_GENRE_KIDS:
+            return "Kids"
+        case JWConfig.TV_GENRE_MYSTERY:
+            return "Mystery"
+        case JWConfig.TV_GENRE_NEWS:
+            return "News"
+        case JWConfig.TV_GENRE_REALITY:
+            return "Reality"
+        case JWConfig.TV_GENRE_SCIFI_FANTASY:
+            return "Sci-Fi & Fantasy"
+        case JWConfig.TV_GENRE_SOAP:
+            return "Soap Opera"
+        case JWConfig.TV_GENRE_TALK:
+            return "Talkshow"
+        case JWConfig.TV_GENRE_WAR_POLITICS:
+            return "War and Politics"
+        case JWConfig.TV_GENRE_WESTERN:
+            return "Western"
+        default:
+            return ""
+        }
+    }
+}
+
 // MARK: UIScreen Extension
 extension UIScreen{
    static let screenWidth = UIScreen.main.bounds.size.width

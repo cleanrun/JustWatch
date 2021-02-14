@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 struct SearchNavigationView: View {
     var body: some View {
-        ZStack {
-            Color.purple
-        }.edgesIgnoringSafeArea(.all)
+        NavigationStackView {
+            ZStack {
+                Color.purple
+            }.edgesIgnoringSafeArea(.all)
+        }
     }
 }
 

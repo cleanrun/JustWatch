@@ -16,13 +16,16 @@ class TMDBMovie: NSObject {
     var originalTitle: String = ""
     var originalLanguage: String = ""
     var overview: String = ""
+    var runtime: Int = 0
     var budget: Int = 0
     var popularity: Double = 0.0
     var posterPath: String = ""
+    var backdropPath: String = ""
     var releaseDate: String = ""
     var status: String = ""
     var voteAverage: Double = 0.0
     var voteCount: Int = 0
+    var genreIDs = [String]()
     var productionCompanies = [TMDBProductionCompany]()
     var genres = [TMDBGenre]()
     
@@ -37,13 +40,21 @@ class TMDBMovie: NSObject {
         originalTitle = data["original_title"].stringValue
         originalLanguage = data["original_language"].stringValue
         overview = data["overview"].stringValue
+        runtime = data["runtime"].intValue
         budget = data["budget"].intValue
         popularity = data["popularity"].doubleValue
         posterPath = data["poster_path"].stringValue
+        backdropPath = data["backdrop_path"].stringValue
         releaseDate = data["release_date"].stringValue
         status = data["status"].stringValue
         voteAverage = data["vote_average"].doubleValue
         voteCount = data["vote_count"].intValue
+        
+        let genreIDArray = data["genre_ids"].arrayValue
+        for id in genreIDArray {
+            let genreID = id.stringValue
+            genreIDs.append(genreID)
+        }
         
         let productionCompaniesArray = data["production_companies"].arrayValue
         for companyData in productionCompaniesArray {

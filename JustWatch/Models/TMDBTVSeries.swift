@@ -14,6 +14,7 @@ class TMDBTVSeries: NSObject {
     var inProduction: Bool = false
     var originalName: String = ""
     var originalLanguage: String = ""
+    var firstAirDate: String = ""
     var overview: String = ""
     var status: String = ""
     var tagline: String = ""
@@ -24,6 +25,8 @@ class TMDBTVSeries: NSObject {
     var numberOfSeasons: Int = 0
     var numberOfEpisodes: Int = 0
     var posterPath: String = ""
+    var backdropPath: String = ""
+    var genreIDs = [String]()
     var genres = [TMDBGenre]()
     var productionCompanies = [TMDBProductionCompany]()
     var seasons = [TMDBTVSeason]()
@@ -39,6 +42,7 @@ class TMDBTVSeries: NSObject {
         inProduction = data["in_production"].boolValue
         originalName = data["original_name"].stringValue
         originalLanguage = data["original_language"].stringValue
+        firstAirDate = data["first_air_date"].stringValue
         overview = data["overview"].stringValue
         status = data["status"].stringValue
         tagline = data["tagline"].stringValue
@@ -49,11 +53,18 @@ class TMDBTVSeries: NSObject {
         numberOfSeasons = data["number_of_seasons"].intValue
         numberOfEpisodes = data["number_of_episodes"].intValue
         posterPath = data["poster_path"].stringValue
+        backdropPath = data["backdrop_path"].stringValue
         
+        let genreIDArray = data["genre_ids"].arrayValue
         let genresArray = data["genres"].arrayValue
         let productionCompaniesArray = data["production_companies"].arrayValue
         let seasonsArray = data["seasons"].arrayValue
         let createdByArray = data["created_by"].arrayValue
+        
+        for id in genreIDArray {
+            let genreID = id.stringValue
+            genreIDs.append(genreID)
+        }
         
         for genreData in genresArray {
             let genre = TMDBGenre(with: genreData)

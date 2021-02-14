@@ -15,7 +15,6 @@ struct HomeTabView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            
             ZStack {
                 VStack {
                     switch router.currentPage {
@@ -32,7 +31,6 @@ struct HomeTabView: View {
                     Spacer()
                     HStack {
                         HStack {
-                                
                             TabBarIcon(router: router, assignedPage: .movie, width: geometry.size.width/5.7, height: iconHeight, systemIconName: "film")
                             TabBarIcon(router: router, assignedPage: .tv, width: geometry.size.width/5.7, height: iconHeight, systemIconName: "tv")
                             TabBarIcon(router: router, assignedPage: .search, width: geometry.size.width/5.7, height: iconHeight, systemIconName: "magnifyingglass.circle")

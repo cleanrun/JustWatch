@@ -9,5 +9,6 @@ target 'JustWatch' do
   pod 'NavigationStack'
   pod 'Alamofire', '~> 5.2'
   pod 'SwiftyJSON'
+  pod 'netfox' #, :configurations => ['Debug']
 
 end

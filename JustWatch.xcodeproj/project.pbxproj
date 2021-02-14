@@ -9,7 +9,14 @@
 /* Begin PBXBuildFile section */
 		311662C008F7357FAB4E67C0 /* Pods_JustWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526516E9BA03FBD57C90B088 /* Pods_JustWatch.framework */; };
 		EC2D98EC25D8177B0063B9F2 /* MovieHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D98EB25D8177B0063B9F2 /* MovieHomeView.swift */; };
-		EC2D98F025D81F3E0063B9F2 /* MovieCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D98EF25D81F3E0063B9F2 /* MovieCells.swift */; };
+		EC2D98F025D81F3E0063B9F2 /* MovieTrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D98EF25D81F3E0063B9F2 /* MovieTrendingCell.swift */; };
+		EC3AC02F25D8F4A900A0BA97 /* JWPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3AC02E25D8F4A900A0BA97 /* JWPill.swift */; };
+		EC3AC03325D9018E00A0BA97 /* FDDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3AC03225D9018E00A0BA97 /* FDDivider.swift */; };
+		EC3AC03625D913D000A0BA97 /* MoviePosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3AC03525D913D000A0BA97 /* MoviePosterCell.swift */; };
+		EC3AC03A25D92BE200A0BA97 /* JWGenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3AC03925D92BE200A0BA97 /* JWGenreCell.swift */; };
+		EC6941EE25D9352B00A4E823 /* TVHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6941ED25D9352B00A4E823 /* TVHomeView.swift */; };
+		EC6941F225D935BB00A4E823 /* TVTrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6941F125D935BB00A4E823 /* TVTrendingCell.swift */; };
+		EC6941F525D9377D00A4E823 /* TVPosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6941F425D9377D00A4E823 /* TVPosterCell.swift */; };
 		EC80995025D75F6100B7E7F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80994F25D75F6100B7E7F5 /* AppDelegate.swift */; };
 		EC80995225D75F6100B7E7F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80995125D75F6100B7E7F5 /* SceneDelegate.swift */; };
 		EC80995425D75F6100B7E7F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80995325D75F6100B7E7F5 /* ContentView.swift */; };
@@ -36,7 +43,14 @@
 		526516E9BA03FBD57C90B088 /* Pods_JustWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3E366AD8959251272AE5BD /* Pods-JustWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustWatch.debug.xcconfig"; path = "Target Support Files/Pods-JustWatch/Pods-JustWatch.debug.xcconfig"; sourceTree = "<group>"; };
 		EC2D98EB25D8177B0063B9F2 /* MovieHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHomeView.swift; sourceTree = "<group>"; };
-		EC2D98EF25D81F3E0063B9F2 /* MovieCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCells.swift; sourceTree = "<group>"; };
+		EC2D98EF25D81F3E0063B9F2 /* MovieTrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrendingCell.swift; sourceTree = "<group>"; };
+		EC3AC02E25D8F4A900A0BA97 /* JWPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWPill.swift; sourceTree = "<group>"; };
+		EC3AC03225D9018E00A0BA97 /* FDDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDDivider.swift; sourceTree = "<group>"; };
+		EC3AC03525D913D000A0BA97 /* MoviePosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterCell.swift; sourceTree = "<group>"; };
+		EC3AC03925D92BE200A0BA97 /* JWGenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWGenreCell.swift; sourceTree = "<group>"; };
+		EC6941ED25D9352B00A4E823 /* TVHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVHomeView.swift; sourceTree = "<group>"; };
+		EC6941F125D935BB00A4E823 /* TVTrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVTrendingCell.swift; sourceTree = "<group>"; };
+		EC6941F425D9377D00A4E823 /* TVPosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVPosterCell.swift; sourceTree = "<group>"; };
 		EC80994C25D75F6100B7E7F5 /* JustWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC80994F25D75F6100B7E7F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC80995125D75F6100B7E7F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +115,36 @@
 		EC2D98EE25D81EC70063B9F2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				EC2D98EF25D81F3E0063B9F2 /* MovieCells.swift */,
+				EC2D98EF25D81F3E0063B9F2 /* MovieTrendingCell.swift */,
+				EC3AC03525D913D000A0BA97 /* MoviePosterCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EC3AC02D25D8F49400A0BA97 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				EC3AC02E25D8F4A900A0BA97 /* JWPill.swift */,
+				EC3AC03925D92BE200A0BA97 /* JWGenreCell.swift */,
+				EC3AC03225D9018E00A0BA97 /* FDDivider.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		EC6941EB25D9350C00A4E823 /* TV Show */ = {
+			isa = PBXGroup;
+			children = (
+				EC6941EC25D9351400A4E823 /* Cells */,
+				EC6941ED25D9352B00A4E823 /* TVHomeView.swift */,
+			);
+			path = "TV Show";
+			sourceTree = "<group>";
+		};
+		EC6941EC25D9351400A4E823 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EC6941F125D935BB00A4E823 /* TVTrendingCell.swift */,
+				EC6941F425D9377D00A4E823 /* TVPosterCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -129,8 +172,8 @@
 			children = (
 				EC80996D25D7607200B7E7F5 /* Life Cycle */,
 				EC80997025D7608700B7E7F5 /* Models */,
-				EC80996F25D7607E00B7E7F5 /* Utilities */,
 				EC80996E25D7607A00B7E7F5 /* Views */,
+				EC80996F25D7607E00B7E7F5 /* Utilities */,
 				EC80995825D75F6200B7E7F5 /* Assets.xcassets */,
 				EC80996025D75F6200B7E7F5 /* Info.plist */,
 				EC80995525D75F6100B7E7F5 /* JustWatch.xcdatamodeld */,
@@ -159,6 +202,7 @@
 		EC80996E25D7607A00B7E7F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EC6941EB25D9350C00A4E823 /* TV Show */,
 				EC2D98EA25D8175C0063B9F2 /* Movie */,
 				EC96D6E925D7F742002C9E20 /* Home */,
 				EC80997125D7609A00B7E7F5 /* Splash Screen */,
@@ -170,6 +214,7 @@
 		EC80996F25D7607E00B7E7F5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EC3AC02D25D8F49400A0BA97 /* Subviews */,
 				EC80997225D760C800B7E7F5 /* JWConfig.swift */,
 				EC80997625D760FE00B7E7F5 /* JWExtensions.swift */,
 				EC80997925D7628E00B7E7F5 /* JWServices.swift */,
@@ -325,6 +370,7 @@
 				EC80998525D782AB00B7E7F5 /* TMDBMovie.swift in Sources */,
 				EC80998E25D78D8A00B7E7F5 /* TMDBTVSeries.swift in Sources */,
 				EC80995025D75F6100B7E7F5 /* AppDelegate.swift in Sources */,
+				EC3AC03625D913D000A0BA97 /* MoviePosterCell.swift in Sources */,
 				EC2D98EC25D8177B0063B9F2 /* MovieHomeView.swift in Sources */,
 				EC96D6EB25D7F822002C9E20 /* HomeTabView.swift in Sources */,
 				EC80995225D75F6100B7E7F5 /* SceneDelegate.swift in Sources */,
@@ -332,14 +378,20 @@
 				EC96D6F525D807B7002C9E20 /* SearchNavigationView.swift in Sources */,
 				EC80998225D77D1000B7E7F5 /* TMDBError.swift in Sources */,
 				EC80995725D75F6100B7E7F5 /* JustWatch.xcdatamodeld in Sources */,
-				EC2D98F025D81F3E0063B9F2 /* MovieCells.swift in Sources */,
+				EC2D98F025D81F3E0063B9F2 /* MovieTrendingCell.swift in Sources */,
 				EC80998B25D78A4E00B7E7F5 /* TMDBReview.swift in Sources */,
 				EC96D6EF25D8078F002C9E20 /* MovieNavigationView.swift in Sources */,
 				EC96D6F225D807AC002C9E20 /* TVNavigationView.swift in Sources */,
+				EC3AC02F25D8F4A900A0BA97 /* JWPill.swift in Sources */,
 				EC80997725D760FE00B7E7F5 /* JWExtensions.swift in Sources */,
 				EC80998825D788B700B7E7F5 /* TMDBPeople.swift in Sources */,
+				EC6941F525D9377D00A4E823 /* TVPosterCell.swift in Sources */,
 				EC80997325D760C800B7E7F5 /* JWConfig.swift in Sources */,
+				EC6941EE25D9352B00A4E823 /* TVHomeView.swift in Sources */,
+				EC6941F225D935BB00A4E823 /* TVTrendingCell.swift in Sources */,
+				EC3AC03A25D92BE200A0BA97 /* JWGenreCell.swift in Sources */,
 				EC80997A25D7628E00B7E7F5 /* JWServices.swift in Sources */,
+				EC3AC03325D9018E00A0BA97 /* FDDivider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
