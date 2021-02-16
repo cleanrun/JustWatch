@@ -65,6 +65,13 @@ struct PrimaryButtonStyle: ButtonStyle {
 
 // MARK: Color Extension
 extension Color {
+    static let SAPPHIRE = Color.init(hex: JWConfig.COLOR_SAPPHIRE)
+    static let DANUBE = Color.init(hex: JWConfig.COLOR_DANUBE)
+    static let LAVENDER_GRAY = Color.init(hex: JWConfig.COLOR_LAVENDER_GRAY)
+    static let LIGHT_ORCHID = Color.init(hex: JWConfig.COLOR_LIGHT_ORCHID)
+    static let STRIKEMASTER = Color.init(hex: JWConfig.COLOR_STRIKEMASTER)
+    static let LIGHT_GRAY = Color.init(hex: JWConfig.COLOR_LIGHT_GRAY)
+    
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0

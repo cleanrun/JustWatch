@@ -15,7 +15,7 @@ struct TVHomeView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .top) {
-                Color(hex: JWConfig.COLOR_STRIKEMASTER)
+                Color.STRIKEMASTER
                     .frame(width: geometry.size.width, height: 300)
                     .cornerRadiusWithEachCorner(100, corners: [.bottomRight])
                 
@@ -57,7 +57,7 @@ struct TVHomeView: View {
                         HStack {
                             Text("Genres")
                                 .font(Font.custom(JWConfig.FONT_ARIAL, size: 20).weight(.semibold))
-                                .foregroundColor(Color(hex: JWConfig.COLOR_STRIKEMASTER))
+                                .foregroundColor(Color.STRIKEMASTER)
                                 .padding(EdgeInsets(top: 10, leading: 18, bottom: 10, trailing: 0))
                             Spacer()
                             
@@ -85,7 +85,7 @@ struct TVHomeView: View {
                         HStack {
                             Text("On The Air")
                                 .font(Font.custom(JWConfig.FONT_ARIAL, size: 20).weight(.semibold))
-                                .foregroundColor(Color(hex: JWConfig.COLOR_STRIKEMASTER))
+                                .foregroundColor(Color.STRIKEMASTER)
                                 .padding(EdgeInsets(top: 10, leading: 18, bottom: 10, trailing: 0))
                             Spacer()
                             
@@ -115,7 +115,7 @@ struct TVHomeView: View {
                         HStack {
                             Text("Top Rated")
                                 .font(Font.custom(JWConfig.FONT_ARIAL, size: 20).weight(.semibold))
-                                .foregroundColor(Color(hex: JWConfig.COLOR_STRIKEMASTER))
+                                .foregroundColor(Color.STRIKEMASTER)
                                 .padding(EdgeInsets(top: 10, leading: 18, bottom: 10, trailing: 0))
                             Spacer()
                             

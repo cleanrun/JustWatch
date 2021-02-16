@@ -119,12 +119,11 @@ class JWServices {
             urlConfig.timeoutIntervalForRequest = JWConfig.RTO_INTERVAL
             manager = Session(configuration: urlConfig)
         }
-        print("-image url: \n\(url)")
+        //print("-image url: \n\(url)")
         let request = manager.request(url, method: HTTPMethod.get, encoding: URLEncoding.default)
         request.response { response in
             switch response.result {
             case .success(let values):
-                print("-response: \n\(values!)")
                 switch response.response?.statusCode {
                 case 200:
                     onSuccess(values!)
@@ -133,8 +132,7 @@ class JWServices {
                 default:
                     onFailure()
                 }
-            case .failure(let values):
-                print("-response: \n\(values)")
+            case .failure(_):
                 onFailure()
             }
         }

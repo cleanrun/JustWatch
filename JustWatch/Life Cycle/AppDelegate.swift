@@ -12,13 +12,12 @@ import netfox
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // Netfox activation
         NFX.sharedInstance().start()
+        NFX.sharedInstance().ignoreURL("https://image.tmdb.org/")
         
         return true
     }

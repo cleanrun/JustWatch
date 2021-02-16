@@ -12,7 +12,7 @@ struct SearchNavigationView: View {
     var body: some View {
         NavigationStackView {
             ZStack {
-                Color.purple
+                SearchView()
             }.edgesIgnoringSafeArea(.all)
         }
     }

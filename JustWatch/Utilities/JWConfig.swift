@@ -54,7 +54,7 @@ class JWConfig {
     
     static let MOVIE_GENRE_ALL = ["28", "12", "16", "35", "80", "99", "18", "10751", "14", "36", "27", "10402", "9648", "10749", "878", "10770", "53", "10752", "37"]
     
-    // MARK: TV Genres static let TV_GENRE_
+    // MARK: TV Genres
     static let TV_GENRE_ACTION_ADVENTURE = "10759"
     static let TV_GENRE_ANIMATION = "16"
     static let TV_GENRE_COMEDY = "35"
@@ -73,4 +73,7 @@ class JWConfig {
     static let TV_GENRE_WESTERN = "37"
     
     static let TV_GENRE_ALL = ["10759", "16", "35", "80", "99", "18", "10751", "10762", "9648", "10763", "10764", "10765", "10766", "10767", "10768", "37"]
+    
+    // MARK: Wordings
+    static let WORDING_SEARCH_PLACEHOLDER = "Search here.."
 }

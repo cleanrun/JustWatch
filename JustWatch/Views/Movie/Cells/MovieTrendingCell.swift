@@ -17,6 +17,8 @@ struct MovieTrendingCell: View {
             Image(uiImage: (UIImage(data: viewModel.imageData) ?? UIImage(named: JWConfig.IMG_PLACEHOLDER_MOVIE_BACKDROP))!)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
+                .frame(width: 350, height: 180)
+                .clipped()
             
             VStack(alignment: .leading) {
                 HStack {
@@ -37,7 +39,7 @@ struct MovieTrendingCell: View {
                 }
                 Spacer()
                 HStack {
-                    ForEach(viewModel.genres, id: \.self) { genre in
+                    ForEach(viewModel.genres.prefix(3), id: \.self) { genre in
                         JWPill(text: genre.toMovieGenre(), textSize: 10)
                     }
                 }.padding(EdgeInsets(top: 1, leading: 20, bottom: 10, trailing: 0))

@@ -11,14 +11,23 @@ struct JWPill: View {
     
     var text: String
     var textSize: Int
-    var tapGesture: () -> Void = {}
+    var tapGesture: () -> Void
+    
+    @Binding var isActive: Bool
+    
+    init(text: String, textSize: Int, isActive: Binding<Bool> = .constant(false), tapGesture: @escaping () -> Void = {} ) {
+        self.text = text
+        self.textSize = textSize
+        self.tapGesture = tapGesture
+        _isActive = isActive
+    }
     
     var body: some View {
         Text(text)
-            .foregroundColor(.white)
+            .foregroundColor(isActive ? .SAPPHIRE : .white)
             .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15))
             .font(Font.custom("Arial", size: CGFloat(textSize)).weight(.bold))
-            .background(Color.black.opacity(0.4))
+            .background(isActive ? .DANUBE : Color.black.opacity(0.4))
             .lineLimit(1)
             .cornerRadius(13)
             .onTapGesture {
