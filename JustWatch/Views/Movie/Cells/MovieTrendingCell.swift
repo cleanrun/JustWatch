@@ -12,6 +12,8 @@ struct MovieTrendingCell: View {
     
     @ObservedObject var viewModel: MovieTrendingCellVM
     
+    var onTapGesture: () -> Void = {}
+    
     var body: some View {
         ZStack(alignment: .leading) {
             Image(uiImage: (UIImage(data: viewModel.imageData) ?? UIImage(named: JWConfig.IMG_PLACEHOLDER_MOVIE_BACKDROP))!)
@@ -48,6 +50,9 @@ struct MovieTrendingCell: View {
         }.frame(width: 350, height: 180)
         .cornerRadius(25)
         .padding(5)
+        .onTapGesture {
+            onTapGesture()
+        }
     }
 }
 

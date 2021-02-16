@@ -15,11 +15,14 @@
 		EC3AC03625D913D000A0BA97 /* MoviePosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3AC03525D913D000A0BA97 /* MoviePosterCell.swift */; };
 		EC3AC03A25D92BE200A0BA97 /* JWGenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3AC03925D92BE200A0BA97 /* JWGenreCell.swift */; };
 		EC3DF1BF25DB6FE50084594B /* JWSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF1BE25DB6FE50084594B /* JWSearchField.swift */; };
+		EC44DFBC25DC0BE7002DB473 /* JWBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44DFBB25DC0BE7002DB473 /* JWBackButton.swift */; };
 		EC4AA10725DB7FD1000A55A5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AA10625DB7FD1000A55A5 /* SearchView.swift */; };
 		EC4AA10C25DB93AD000A55A5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AA10B25DB93AD000A55A5 /* SearchResultCell.swift */; };
 		EC6941EE25D9352B00A4E823 /* TVHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6941ED25D9352B00A4E823 /* TVHomeView.swift */; };
 		EC6941F225D935BB00A4E823 /* TVTrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6941F125D935BB00A4E823 /* TVTrendingCell.swift */; };
 		EC6941F525D9377D00A4E823 /* TVPosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6941F425D9377D00A4E823 /* TVPosterCell.swift */; };
+		EC72D48825DBE4F70074E0AE /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D48725DBE4F70074E0AE /* MovieDetailView.swift */; };
+		EC72D48D25DBFF7F0074E0AE /* ProductionCompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D48C25DBFF7F0074E0AE /* ProductionCompanyCell.swift */; };
 		EC80995025D75F6100B7E7F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80994F25D75F6100B7E7F5 /* AppDelegate.swift */; };
 		EC80995225D75F6100B7E7F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80995125D75F6100B7E7F5 /* SceneDelegate.swift */; };
 		EC80995425D75F6100B7E7F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80995325D75F6100B7E7F5 /* ContentView.swift */; };
@@ -52,11 +55,14 @@
 		EC3AC03525D913D000A0BA97 /* MoviePosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterCell.swift; sourceTree = "<group>"; };
 		EC3AC03925D92BE200A0BA97 /* JWGenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWGenreCell.swift; sourceTree = "<group>"; };
 		EC3DF1BE25DB6FE50084594B /* JWSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWSearchField.swift; sourceTree = "<group>"; };
+		EC44DFBB25DC0BE7002DB473 /* JWBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWBackButton.swift; sourceTree = "<group>"; };
 		EC4AA10625DB7FD1000A55A5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		EC4AA10B25DB93AD000A55A5 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		EC6941ED25D9352B00A4E823 /* TVHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVHomeView.swift; sourceTree = "<group>"; };
 		EC6941F125D935BB00A4E823 /* TVTrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVTrendingCell.swift; sourceTree = "<group>"; };
 		EC6941F425D9377D00A4E823 /* TVPosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVPosterCell.swift; sourceTree = "<group>"; };
+		EC72D48725DBE4F70074E0AE /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		EC72D48C25DBFF7F0074E0AE /* ProductionCompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionCompanyCell.swift; sourceTree = "<group>"; };
 		EC80994C25D75F6100B7E7F5 /* JustWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC80994F25D75F6100B7E7F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC80995125D75F6100B7E7F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 		EC2D98EA25D8175C0063B9F2 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				EC72D48625DBE4E40074E0AE /* Movie Detail */,
 				EC2D98EE25D81EC70063B9F2 /* Cells */,
 				EC2D98EB25D8177B0063B9F2 /* MovieHomeView.swift */,
 			);
@@ -134,6 +141,7 @@
 				EC3AC03925D92BE200A0BA97 /* JWGenreCell.swift */,
 				EC3AC03225D9018E00A0BA97 /* FDDivider.swift */,
 				EC3DF1BE25DB6FE50084594B /* JWSearchField.swift */,
+				EC44DFBB25DC0BE7002DB473 /* JWBackButton.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -169,6 +177,23 @@
 			children = (
 				EC6941F125D935BB00A4E823 /* TVTrendingCell.swift */,
 				EC6941F425D9377D00A4E823 /* TVPosterCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EC72D48625DBE4E40074E0AE /* Movie Detail */ = {
+			isa = PBXGroup;
+			children = (
+				EC72D48B25DBFF6C0074E0AE /* Cells */,
+				EC72D48725DBE4F70074E0AE /* MovieDetailView.swift */,
+			);
+			path = "Movie Detail";
+			sourceTree = "<group>";
+		};
+		EC72D48B25DBFF6C0074E0AE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EC72D48C25DBFF7F0074E0AE /* ProductionCompanyCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -395,6 +420,7 @@
 				EC80998525D782AB00B7E7F5 /* TMDBMovie.swift in Sources */,
 				EC80998E25D78D8A00B7E7F5 /* TMDBTVSeries.swift in Sources */,
 				EC3DF1BF25DB6FE50084594B /* JWSearchField.swift in Sources */,
+				EC72D48825DBE4F70074E0AE /* MovieDetailView.swift in Sources */,
 				EC80995025D75F6100B7E7F5 /* AppDelegate.swift in Sources */,
 				EC3AC03625D913D000A0BA97 /* MoviePosterCell.swift in Sources */,
 				EC2D98EC25D8177B0063B9F2 /* MovieHomeView.swift in Sources */,
@@ -413,11 +439,13 @@
 				EC80997725D760FE00B7E7F5 /* JWExtensions.swift in Sources */,
 				EC80998825D788B700B7E7F5 /* TMDBPeople.swift in Sources */,
 				EC4AA10725DB7FD1000A55A5 /* SearchView.swift in Sources */,
+				EC72D48D25DBFF7F0074E0AE /* ProductionCompanyCell.swift in Sources */,
 				EC6941F525D9377D00A4E823 /* TVPosterCell.swift in Sources */,
 				EC80997325D760C800B7E7F5 /* JWConfig.swift in Sources */,
 				EC6941EE25D9352B00A4E823 /* TVHomeView.swift in Sources */,
 				EC6941F225D935BB00A4E823 /* TVTrendingCell.swift in Sources */,
 				EC3AC03A25D92BE200A0BA97 /* JWGenreCell.swift in Sources */,
+				EC44DFBC25DC0BE7002DB473 /* JWBackButton.swift in Sources */,
 				EC80997A25D7628E00B7E7F5 /* JWServices.swift in Sources */,
 				EC3AC03325D9018E00A0BA97 /* FDDivider.swift in Sources */,
 			);

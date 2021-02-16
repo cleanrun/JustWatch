@@ -40,15 +40,19 @@ struct JWBorderPill: View {
     
     var text: String
     var textSize: Int
+    
+    var textColor: Color = .gray
+    var borderColor: Color = .gray
+    
     var tapGesture: () -> Void = {}
     
     var body: some View {
         Text(text)
-            .foregroundColor(.gray)
+            .foregroundColor(textColor)
             .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15))
             .font(Font.custom("Arial", size: CGFloat(textSize)).weight(.bold))
             .lineLimit(1)
-            .overlay(RoundedRectangle(cornerRadius: 13).stroke(Color.gray))
+            .overlay(RoundedRectangle(cornerRadius: 13).stroke(borderColor))
             .onTapGesture {
                 self.tapGesture()
             }
@@ -57,6 +61,7 @@ struct JWBorderPill: View {
 
 struct JWPill_Previews: PreviewProvider {
     static var previews: some View {
-        JWPill(text: "Animation", textSize: 13).previewLayout(PreviewLayout.sizeThatFits)
+        //JWPill(text: "Animation", textSize: 13).previewLayout(PreviewLayout.sizeThatFits)
+        JWBorderPill(text: "Animation", textSize: 13).previewLayout(PreviewLayout.sizeThatFits)
     }
 }

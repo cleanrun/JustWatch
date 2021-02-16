@@ -68,9 +68,9 @@ class JWServices {
     // MARK: Search URL
     static let URL_SEARCH_GET_COLLECTIONS: (String, String) -> (String) = { (query, page) in JWConfig.URL_BASE + "search/collection?api_key=\(JWConfig.API_KEY)&language=en-US&query=\(query)&page=\(page)" }
     static let URL_SEARCH_GET_KEYWORDS: (String, String) -> (String) = { (query, page) in JWConfig.URL_BASE + "search/keyword?api_key=\(JWConfig.API_KEY)&query=\(query)&page=\(page)" }
-    static let URL_SEARCH_GET_MOVIES: (String, String) -> (String) = { (query, page) in JWConfig.URL_BASE + "search/movie?api_key=\(JWConfig.API_KEY)&language=en-US&query=\(query)&page=\(page)&include_adult=true" }
-    static let URL_SEARCH_GET_PEOPLE: (String, String) -> (String) = { (query, page) in JWConfig.URL_BASE + "search/person?api_key=\(JWConfig.API_KEY)&language=en-US&query=\(query)&page=\(page)&include_adult=true" }
-    static let URL_SEARCH_GET_TV_SHOWS: (String, String) -> (String) = { (query, page) in JWConfig.URL_BASE + "search/tv?api_key=\(JWConfig.API_KEY)&language=en-US&page=\(page)&query=\(query)&include_adult=true" }
+    static let URL_SEARCH_GET_MOVIES: (String, String) -> (String) = { (query, page) in JWConfig.URL_BASE + "search/movie?api_key=\(JWConfig.API_KEY)&language=en-US&query=\(query)&page=\(page)&include_adult=false" }
+    static let URL_SEARCH_GET_PEOPLE: (String, String) -> (String) = { (query, page) in JWConfig.URL_BASE + "search/person?api_key=\(JWConfig.API_KEY)&language=en-US&query=\(query)&page=\(page)&include_adult=false" }
+    static let URL_SEARCH_GET_TV_SHOWS: (String, String) -> (String) = { (query, page) in JWConfig.URL_BASE + "search/tv?api_key=\(JWConfig.API_KEY)&language=en-US&page=\(page)&query=\(query)&include_adult=false" }
     
     /**
         End of TMDB URLs

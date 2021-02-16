@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 // MARK: Main View
 struct MovieHomeView: View {
     
     @StateObject private var viewModel = MovieHomeVM()
+    @EnvironmentObject private var navStack: NavigationStack
     
     var body: some View {
         GeometryReader { geometry in
@@ -38,7 +40,9 @@ struct MovieHomeView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack {
                                 ForEach(viewModel.popularMovies, id: \.ID) { popular in
-                                    MovieTrendingCell(viewModel: MovieTrendingCellVM(popular))
+                                    MovieTrendingCell(viewModel: MovieTrendingCellVM(popular)) {
+                                        self.navStack.push(MovieDetailView(viewModel: MovieDetailVM(id: popular.ID)))
+                                    }
                                 }
                             }
                         }.padding(EdgeInsets(top: 0, leading: 18, bottom: 6, trailing: 0))

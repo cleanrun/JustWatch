@@ -76,6 +76,10 @@ class TMDBProductionCompany: NSObject {
     var logoPath: String = ""
     var originCountry: String = ""
     
+    override init() {
+        // Empty Constructor
+    }
+    
     init(with data: JSON) {
         ID = data["id"].intValue
         name = data["name"].stringValue
