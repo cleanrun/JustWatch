@@ -11,6 +11,7 @@ import SwiftUI
 struct MoviePosterCell: View {
     
     @ObservedObject var viewModel: MoviePosterCellVM
+    var onTapGesture: () -> Void = {}
     
     var body: some View {
         ZStack {
@@ -20,6 +21,9 @@ struct MoviePosterCell: View {
         }.frame(width: 200, height: 390, alignment: .center)
         .cornerRadius(25)
         .padding(5)
+        .onTapGesture {
+            onTapGesture()
+        }
     }
 }
 

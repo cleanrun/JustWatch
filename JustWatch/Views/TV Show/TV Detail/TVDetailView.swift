@@ -1,19 +1,19 @@
 //
-//  MovieDetailView.swift
+//  TVDetailView.swift
 //  JustWatch
 //
-//  Created by Marchell on 16/02/21.
+//  Created by Marchell on 17/02/21.
 //
 
 import SwiftUI
 import NavigationStack
 
 // MARK: Main View
-struct MovieDetailView: View {
+struct TVDetailView: View {
     @EnvironmentObject private var navStack: NavigationStack
-    @ObservedObject var viewModel: MovieDetailVM
+    @ObservedObject var viewModel: TVDetailVM
     
-    init(viewModel: MovieDetailVM) {
+    init(viewModel: TVDetailVM) {
         self.viewModel = viewModel
         //UIScrollView.appearance().bounces = false
     }
@@ -40,15 +40,15 @@ struct MovieDetailView: View {
                                     .clipped()
                                 
                                 VStack(alignment: .leading) {
-                                    Text(viewModel.title)
+                                    Text(viewModel.name)
                                         .font(Font.custom(JWConfig.FONT_ARIAL, size: 25).weight(.semibold))
-                                        .foregroundColor(.SAPPHIRE)
+                                        .foregroundColor(.STRIKEMASTER)
                                         .padding([.top, .bottom], 12)
                                         .lineLimit(3)
                                     
                                     HStack {
                                         ForEach(viewModel.genres.prefix(2), id: \.ID) { genre in
-                                            JWBorderPill(text: genre.name, textSize: 12, textColor: .SAPPHIRE, borderColor: .DANUBE)
+                                            JWBorderPill(text: genre.name, textSize: 12, textColor: .STRIKEMASTER, borderColor: .LIGHT_ORCHID)
                                         }
                                     }
                                 }.padding([.leading], 10)
@@ -61,22 +61,22 @@ struct MovieDetailView: View {
                             
                             HStack(spacing: 50) {
                                 VStack {
-                                    Text("Release Date")
+                                    Text("First Air Date")
                                         .font(Font.custom(JWConfig.FONT_ARIAL, size: 15))
                                         .foregroundColor(.gray)
                                         .padding([.bottom], 1)
                                     
-                                    Text(viewModel.releaseDate)
+                                    Text(viewModel.firstAirDate)
                                         .font(Font.custom(JWConfig.FONT_ARIAL, size: 18).weight(.semibold))
                                 }
                                 
                                 VStack() {
-                                    Text("Duration")
+                                    Text("Episodes")
                                         .font(Font.custom(JWConfig.FONT_ARIAL, size: 15))
                                         .foregroundColor(.gray)
                                         .padding([.bottom], 1)
                                     
-                                    Text("\(viewModel.runtime)")
+                                    Text("\(viewModel.numberOfEpisodes)")
                                         .font(Font.custom(JWConfig.FONT_ARIAL, size: 18).weight(.semibold))
                                 }
                                 
@@ -94,7 +94,7 @@ struct MovieDetailView: View {
                             VStack(alignment: .leading) {
                                 Text("Overview")
                                     .font(Font.custom(JWConfig.FONT_ARIAL, size: 23).weight(.semibold))
-                                    .foregroundColor(.SAPPHIRE)
+                                    .foregroundColor(.STRIKEMASTER)
                                     .padding([.top, .bottom], 8)
                                 
                                 Text(viewModel.overview)
@@ -105,9 +105,56 @@ struct MovieDetailView: View {
                             }.padding([.leading, .trailing], 24)
                             
                             VStack(alignment: .leading) {
+                                Text("Seasons")
+                                    .font(Font.custom(JWConfig.FONT_ARIAL, size: 23).weight(.semibold))
+                                    .foregroundColor(.STRIKEMASTER)
+                                    .padding([.top, .bottom], 8)
+                                
+                                VStack {
+                                    ForEach(viewModel.seasons, id: \.self) { season in
+                                        VStack {
+                                            HStack {
+                                                Text(season.name)
+                                                    .font(Font.custom(JWConfig.FONT_ARIAL, size: 15).weight(.semibold))
+                                                    .foregroundColor(.gray)
+                                                    .padding([.top], 8)
+                                                
+                                                Spacer()
+                                                
+                                                Image(systemName: "chevron.right")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width: 15, height: 15)
+                                                    .foregroundColor(.gray)
+                                            }.padding([.top, .bottom], 4)
+                                            
+                                            Divider().foregroundColor(.LIGHT_GRAY)
+                                        }
+                                    }
+                                }
+  
+                            }.padding([.leading, .trailing], 24)
+                            
+                            VStack(alignment: .leading) {
+                                Text("Networks")
+                                    .font(Font.custom(JWConfig.FONT_ARIAL, size: 23).weight(.semibold))
+                                    .foregroundColor(.STRIKEMASTER)
+                                    .padding([.top], 8)
+                                
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    LazyHStack {
+                                        ForEach(viewModel.networks, id: \.ID) { network in
+                                            ProductionCompanyCell(viewModel: ProductionCompanyCellVM(network))
+                                        }
+                                    }
+                                }
+                            }.frame(height: 250)
+                            .padding([.leading], 24)
+                            
+                            VStack(alignment: .leading) {
                                 Text("Production Companies")
                                     .font(Font.custom(JWConfig.FONT_ARIAL, size: 23).weight(.semibold))
-                                    .foregroundColor(.SAPPHIRE)
+                                    .foregroundColor(.STRIKEMASTER)
                                     .padding([.top], 8)
                                 
                                 ScrollView(.horizontal, showsIndicators: false) {
@@ -140,26 +187,29 @@ struct MovieDetailView: View {
 }
 
 // MARK: Preview Provider
-struct MovieDetailView_Previews: PreviewProvider {
+struct TVDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailView(viewModel: MovieDetailVM(id: 464052))
+        TVDetailView(viewModel: TVDetailVM(id: 1396))
     }
 }
 
 // MARK: View Model
-class MovieDetailVM: ObservableObject {
-    @Published private var movie = TMDBMovie()
+class TVDetailVM: ObservableObject {
+    @Published private var tv = TMDBTVSeries()
     
     @Published var posterData = Data()
     @Published var backdropData = Data()
     
-    var title: String { movie.title }
-    var genres: [TMDBGenre] { movie.genres }
-    var releaseDate: String { movie.releaseDate }
-    var runtime: Int { movie.runtime }
-    var voteAverage: Double { movie.voteAverage }
-    var overview: String { movie.overview }
-    var productionCompanies: [TMDBProductionCompany] { movie.productionCompanies }
+    var name: String { tv.name }
+    var genres: [TMDBGenre] { tv.genres }
+    var firstAirDate: String { tv.firstAirDate }
+    var numberOfEpisodes: Int { tv.numberOfEpisodes }
+    var numberOfSeasons: Int { tv.numberOfSeasons }
+    var voteAverage: Double { tv.voteAverage }
+    var overview: String { tv.overview }
+    var seasons: [TMDBTVSeason] { tv.seasons }
+    var networks: [TMDBProductionCompany] { tv.networks }
+    var productionCompanies: [TMDBProductionCompany] { tv.productionCompanies }
     
     init(id: Int) {
         getMovie(with: id) {
@@ -168,9 +218,9 @@ class MovieDetailVM: ObservableObject {
     }
     
     private func getMovie(with id: Int, completion: @escaping () -> Void) {
-        let movieUrl = JWServices.URL_MOVIES_GET_DETAILS("\(id)")
+        let movieUrl = JWServices.URL_TV_GET_DETAILS("\(id)")
         JWServices.Request(url: movieUrl, onSuccess: { response in
-            self.movie = TMDBMovie(with: response)
+            self.tv = TMDBTVSeries(with: response)
             completion()
         }) { error in
             print("ERROR GETTING MOVIE DATA:: \(error.statusMessage)")
@@ -178,8 +228,8 @@ class MovieDetailVM: ObservableObject {
     }
     
     private func getImages() {
-        let backdropUrl = JWConfig.URL_IMAGE_BASE + movie.backdropPath
-        let posterUrl = JWConfig.URL_IMAGE_BASE + movie.posterPath
+        let backdropUrl = JWConfig.URL_IMAGE_BASE + tv.backdropPath
+        let posterUrl = JWConfig.URL_IMAGE_BASE + tv.posterPath
         
         JWServices.RequestImage(url: backdropUrl, onSuccess: { data in
             self.backdropData = data

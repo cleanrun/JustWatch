@@ -24,10 +24,13 @@ struct ProductionCompanyCell: View {
                 .padding([.top], 16)
             
             Text(viewModel.name)
-                .font(Font.custom(JWConfig.FONT_ARIAL, size: 15))
+                .font(Font.custom(JWConfig.FONT_ARIAL, size: 12))
                 .foregroundColor(.gray)
+                .padding([.leading, .trailing], 10)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
             
-        }.frame(width: 140, height: 170, alignment: .top)
+        }.frame(width: 125, height: 170, alignment: .top)
         .background(Color.white.cornerRadius(15).shadow(radius: 8))
         .padding(8)
         .onTapGesture {

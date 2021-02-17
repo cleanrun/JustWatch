@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 // MARK: Main View
 struct SearchView: View {
     
     @StateObject private var viewModel = SearchViewVM()
+    @EnvironmentObject private var navStack: NavigationStack
     
     @State private var searchType: SearchType = .movie
     @State private var isMovie: Bool = true
@@ -43,11 +45,15 @@ struct SearchView: View {
                         LazyVStack {
                             if searchType == .movie {
                                 ForEach(viewModel.movieResults, id: \.ID) { item in
-                                    SearchResultCell(viewModel: SearchResultCellVM(title: item.title, voteAverage: item.voteAverage, posterPath: item.posterPath, genreIDs: item.genreIDs), searchType: .movie)
+                                    SearchResultCell(viewModel: SearchResultCellVM(title: item.title, voteAverage: item.voteAverage, posterPath: item.posterPath, genreIDs: item.genreIDs), searchType: .movie) {
+                                        self.navStack.push(MovieDetailView(viewModel: MovieDetailVM(id: item.ID)))
+                                    }
                                 }
                             } else {
                                 ForEach(viewModel.tvResults, id: \.ID) { item in
-                                    SearchResultCell(viewModel: SearchResultCellVM(title: item.name, voteAverage: item.voteAverage, posterPath: item.posterPath, genreIDs: item.genreIDs), searchType: .tv)
+                                    SearchResultCell(viewModel: SearchResultCellVM(title: item.name, voteAverage: item.voteAverage, posterPath: item.posterPath, genreIDs: item.genreIDs), searchType: .tv) {
+                                        self.navStack.push(TVDetailView(viewModel: TVDetailVM(id: item.ID)))
+                                    }
                                 }
                             }
                         }

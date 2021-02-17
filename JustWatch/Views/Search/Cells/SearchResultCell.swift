@@ -12,6 +12,7 @@ struct SearchResultCell: View {
     
     @ObservedObject var viewModel: SearchResultCellVM
     var searchType: SearchType
+    var onTapGesture: () -> Void = {}
     
     var body: some View {
         VStack {
@@ -63,6 +64,9 @@ struct SearchResultCell: View {
             .shadow(radius: 9)
         }.frame(minWidth: 100, maxWidth: .infinity, minHeight: 150, maxHeight: 150)
         .padding(13)
+        .onTapGesture {
+            onTapGesture()
+        }
     }
 }
 

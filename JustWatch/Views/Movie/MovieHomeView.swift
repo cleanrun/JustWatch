@@ -100,7 +100,9 @@ struct MovieHomeView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack {
                                 ForEach(viewModel.nowPlayingMovies, id: \.ID) { nowPlaying in
-                                    MoviePosterCell(viewModel: MoviePosterCellVM(nowPlaying))
+                                    MoviePosterCell(viewModel: MoviePosterCellVM(nowPlaying)) {
+                                        self.navStack.push(MovieDetailView(viewModel: MovieDetailVM(id: nowPlaying.ID)))
+                                    }
                                 }
                             }
                         }.padding(EdgeInsets(top: 0, leading: 18, bottom: 6, trailing: 0))
@@ -130,7 +132,9 @@ struct MovieHomeView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack {
                                 ForEach(viewModel.upcomingMovies, id: \.ID) { upcoming in
-                                    MoviePosterCell(viewModel: MoviePosterCellVM(upcoming))
+                                    MoviePosterCell(viewModel: MoviePosterCellVM(upcoming)) {
+                                        self.navStack.push(MovieDetailView(viewModel: MovieDetailVM(id: upcoming.ID)))
+                                    }
                                 }
                             }
                         }.padding(EdgeInsets(top: 0, leading: 18, bottom: 6, trailing: 0))

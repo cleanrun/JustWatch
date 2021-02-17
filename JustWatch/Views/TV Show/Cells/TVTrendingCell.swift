@@ -11,12 +11,15 @@ import SwiftUI
 struct TVTrendingCell: View {
     
     @ObservedObject var viewModel: TVTrendingCellVM
+    var onTapGesture: () -> Void = {}
     
     var body: some View {
         ZStack(alignment: .leading) {
             Image(uiImage: (UIImage(data: viewModel.imageData) ?? UIImage(named: JWConfig.IMG_PLACEHOLDER_MOVIE_BACKDROP))!)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
+                .frame(width: 350, height: 180)
+                .clipped()
             
             VStack(alignment: .leading) {
                 HStack {
@@ -46,6 +49,9 @@ struct TVTrendingCell: View {
         }.frame(width: 350, height: 180)
         .cornerRadius(25)
         .padding(5)
+        .onTapGesture {
+            onTapGesture()
+        }
     }
 }
 

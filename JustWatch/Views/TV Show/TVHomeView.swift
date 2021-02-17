@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import NavigationStack
 
 // MARK: Main View
 struct TVHomeView: View {
     
     @StateObject private var viewModel = TVHomeVM()
+    @EnvironmentObject private var navStack: NavigationStack
     
     var body: some View {
         GeometryReader { geometry in
@@ -38,7 +40,9 @@ struct TVHomeView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack {
                                 ForEach(viewModel.popularTV, id: \.ID) { popular in
-                                    TVTrendingCell(viewModel: TVTrendingCellVM(popular))
+                                    TVTrendingCell(viewModel: TVTrendingCellVM(popular)) {
+                                        self.navStack.push(TVDetailView(viewModel: TVDetailVM(id: popular.ID)))
+                                    }
                                 }
                             }
                         }.padding(EdgeInsets(top: 0, leading: 18, bottom: 6, trailing: 0))
@@ -96,7 +100,9 @@ struct TVHomeView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack {
                                 ForEach(viewModel.onTheAirTV, id: \.ID) { onTheAir in
-                                    TVPosterCell(viewModel: TVPosterCellVM(onTheAir))
+                                    TVPosterCell(viewModel: TVPosterCellVM(onTheAir)) {
+                                        self.navStack.push(TVDetailView(viewModel: TVDetailVM(id: onTheAir.ID)))
+                                    }
                                 }
                             }
                         }.padding(EdgeInsets(top: 0, leading: 18, bottom: 6, trailing: 0))
@@ -126,7 +132,9 @@ struct TVHomeView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack {
                                 ForEach(viewModel.topRatedTV, id: \.ID) { topRated in
-                                    TVPosterCell(viewModel: TVPosterCellVM(topRated))
+                                    TVPosterCell(viewModel: TVPosterCellVM(topRated)) {
+                                        self.navStack.push(TVDetailView(viewModel: TVDetailVM(id: topRated.ID)))
+                                    }
                                 }
                             }
                         }.padding(EdgeInsets(top: 0, leading: 18, bottom: 6, trailing: 0))

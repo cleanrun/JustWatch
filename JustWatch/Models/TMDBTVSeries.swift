@@ -28,6 +28,7 @@ class TMDBTVSeries: NSObject {
     var backdropPath: String = ""
     var genreIDs = [String]()
     var genres = [TMDBGenre]()
+    var networks = [TMDBProductionCompany]()
     var productionCompanies = [TMDBProductionCompany]()
     var seasons = [TMDBTVSeason]()
     var createdBy = [String]()
@@ -60,6 +61,7 @@ class TMDBTVSeries: NSObject {
         let productionCompaniesArray = data["production_companies"].arrayValue
         let seasonsArray = data["seasons"].arrayValue
         let createdByArray = data["created_by"].arrayValue
+        let networksArray = data["networks"].arrayValue
         
         for id in genreIDArray {
             let genreID = id.stringValue
@@ -69,6 +71,11 @@ class TMDBTVSeries: NSObject {
         for genreData in genresArray {
             let genre = TMDBGenre(with: genreData)
             genres.append(genre)
+        }
+        
+        for networkData in networksArray {
+            let network = TMDBProductionCompany(with: networkData)
+            networks.append(network)
         }
         
         for companyData in productionCompaniesArray {
