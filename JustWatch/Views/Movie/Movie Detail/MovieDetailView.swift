@@ -28,6 +28,21 @@ struct MovieDetailView: View {
                 
                 ScrollView(showsIndicators: false) {
                     VStack {
+                        GeometryReader { (proxy: GeometryProxy) in
+                            if proxy.frame(in: .global).minY <= 0 {
+                                Image(uiImage: (UIImage(data: viewModel.backdropData) ?? UIImage(named: JWConfig.IMG_PLACEHOLDER_MOVIE_BACKDROP))!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: proxy.size.width, height: 330)
+                            } else {
+                                Image(uiImage: (UIImage(data: viewModel.backdropData) ?? UIImage(named: JWConfig.IMG_PLACEHOLDER_MOVIE_BACKDROP))!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .offset(y: -proxy.frame(in: .global).minY)
+                                    .frame(width: proxy.size.width, height: 330 + proxy.frame(in: .global).minY)
+                            }
+                        }
+                        
                         VStack(alignment: .leading) {
                             FDDivider(height: 20)
                             

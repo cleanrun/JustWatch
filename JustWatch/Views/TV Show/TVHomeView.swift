@@ -65,7 +65,7 @@ struct TVHomeView: View {
                                 .padding(EdgeInsets(top: 10, leading: 18, bottom: 10, trailing: 0))
                             Spacer()
                             
-                            JWBorderPill(text: "See All", textSize: 12)
+                            JWBorderPill(text: "See All", textSize: 12, tapGesture: { self.navStack.push(GenreListView(genreType: .tv)) })
                                 .padding([.trailing], 18)
                         }.frame(width: geometry.size.width)
                         
