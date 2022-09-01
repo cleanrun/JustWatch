@@ -12,7 +12,7 @@ class JWConfig {
     // MARK: API Configurations
     static let URL_BASE = "https://api.themoviedb.org/3/"
     static let URL_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
-    static let API_KEY = "e9325a84053f572e130d8028237ab315"
+    static let API_KEY = ""
     
     static let RTO_INTERVAL: TimeInterval = 300
     
